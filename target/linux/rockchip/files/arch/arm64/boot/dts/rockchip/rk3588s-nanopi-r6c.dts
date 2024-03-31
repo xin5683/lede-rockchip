@@ -6,17 +6,6 @@
 / {
 	model = "FriendlyElec NanoPi R6C";
 	compatible = "friendlyarm,nanopi-r6c", "rockchip,rk3588";
-
-	gpio-leds {
-		led-lan1 {
-			/delete-property/ function-enumerator;
-		};
-
-		led-lan2 {
-			/delete-property/ function-enumerator;
-			function = LED_FUNCTION_PROGRAMMING;
-		};
-	};
 };
 
 &pcie2x1l1 {
