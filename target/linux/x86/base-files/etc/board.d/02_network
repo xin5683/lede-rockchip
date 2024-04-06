@@ -20,7 +20,7 @@ ikoolcore-r1|pear-inc-pearbox-1|mw-cw-n6000)
 pc-engines-apu1|pc-engines-apu2|pc-engines-apu3)
 	ucidef_set_interfaces_lan_wan "eth1 eth2" "eth0"
 	;;
-roqos-roqos-core-rc10)
+roqos-roqos-core-rc10|default-string)
 	ucidef_set_interfaces_lan_wan "eth1" "eth0"
 	;;
 sophos-sg-105|sophos-xg-105)
