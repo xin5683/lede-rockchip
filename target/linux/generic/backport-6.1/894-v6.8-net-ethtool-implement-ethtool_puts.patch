@@ -126,7 +126,7 @@ Signed-off-by: Justin Stitt <justinstitt@google.com>
 @@ -1974,6 +1974,13 @@ __printf(2, 3) void ethtool_sprintf(u8 *
  }
  EXPORT_SYMBOL(ethtool_sprintf);
-
+ 
 +void ethtool_puts(u8 **data, const char *str)
 +{
 +	strscpy(*data, str, ETH_GSTRING_LEN);
