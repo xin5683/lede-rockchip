@@ -28,7 +28,7 @@ define Device/embedfire_lubancat-1
   DEVICE_MODEL := LubanCat-1
   SOC := rk3566
   BOOT_FLOW := pine64-img
-  DEVICE_PACKAGES := kmod-r8125
+  DEVICE_PACKAGES := kmod-mt7921e wpad-openssl luci-app-modem
 endef
 TARGET_DEVICES += embedfire_lubancat-1
 
@@ -80,7 +80,7 @@ TARGET_DEVICES += embedfire_lubancat-5
 define Device/hinlink_common
   DEVICE_VENDOR := HINLINK
   BOOT_FLOW := pine64-img
-  DEVICE_PACKAGES := kmod-ata-ahci-platform kmod-hwmon-pwmfan kmod-mt7921e kmod-r8125 wpad-openssl
+  DEVICE_PACKAGES := kmod-ata-ahci-platform kmod-hwmon-pwmfan kmod-mt7921e kmod-r8125 wpad-openssl luci-app-modem
 endef
 
 define Device/hinlink_opc-h66k
