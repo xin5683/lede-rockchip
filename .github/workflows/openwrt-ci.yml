@@ -36,7 +36,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
+   # if: github.event.repository.owner.id == github.event.sender.id || ! github.event.sender.id
 
     steps:
 
@@ -68,22 +68,22 @@ jobs:
           CONFIG_TARGET_rockchip=y
           CONFIG_TARGET_rockchip_armv8=y
           CONFIG_TARGET_MULTI_PROFILE=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_doornet1=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_doornet2=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat1=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat1n=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat2=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat2n=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r2s=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4se=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_doornet1=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_doornet2=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat1=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat1n=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat2=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_embedfire_lubancat2n=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r2s=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4s=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r4se=y
           CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r5c=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r5s=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_hinlink_opc-h66k=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_hinlink_opc-h68k=y
-          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_hinlink_opc-h69k=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r5s=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_hinlink_opc-h66k=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_hinlink_opc-h68k=y
+          # CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_hinlink_opc-h69k=y
           CONFIG_TARGET_KERNEL_PARTSIZE=64
-          CONFIG_TARGET_ROOTFS_PARTSIZE=512
+          CONFIG_TARGET_ROOTFS_PARTSIZE=2048
           CONFIG_TARGET_ROOTFS_TARGZ=y
           CONFIG_TARGET_ROOTFS_EXT4FS=y
           CONFIG_TARGET_ROOTFS_SQUASHFS=y
@@ -136,11 +136,11 @@ jobs:
           path: ./bin/targets/
   
 
-      - name: Upload release asset
-        if: github.event == 'release'
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.YOURTOKEN }}
-          file: ./artifact/firmware/*
-          tag: ${{ github.ref }}
-          file_glob: true
+      # - name: Upload release asset
+      #   if: github.event == 'release'
+      #   uses: svenstaro/upload-release-action@v2
+      #   with:
+      #     repo_token: ${{ secrets.YOURTOKEN }}
+      #     file: ./artifact/firmware/*
+      #     tag: ${{ github.ref }}
+      #     file_glob: true
